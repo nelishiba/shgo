@@ -30,11 +30,11 @@ func (p *Program) TokenLiteral() string {
 
 type CmdStatement struct {
 	Token token.Token
-	Name  *Identifier
+	Name  []*Identifier
 }
 
-func (cs *CmdStatement) statementNode()        {}
-func (cs *CmdStatement) TookenLiteral() string { return cs.Token.Literal }
+func (cs *CmdStatement) statementNode()       {}
+func (cs *CmdStatement) TokenLiteral() string { return cs.Token.Literal }
 
 type Identifier struct {
 	Token token.Token
